@@ -1,0 +1,17 @@
+{
+    "name": "Gen0_Bot_10_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut_mut",
+    "weight_damage": 3.9239091866245692,
+    "weight_finish_off": 2.582711538539747,
+    "weight_supression": 1.4972017782891072,
+    "weight_flanking": 3.535161235355494,
+    "weight_cover": 3.872749338843352,
+    "weight_optimal_range": 2.6090179165639853,
+    "penalty_crowding": 1.7676095866842667,
+    "aggression_bias": 3.0,
+    "positional": 2.9463722140811575,
+    "health_bias": -1.053690338191446,
+    "cohesion_bias": 1.4627774027762086,
+    "morale_bias": 1.8561701746236714,
+    "speed_bias": -2.2209164326584845,
+    "range_bias": -0.8596114637014982
+}
