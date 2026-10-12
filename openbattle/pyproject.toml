@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "openbattle"
+dynamic = ["version"]
+description = "something i made to run simulations of an strategy game i'm currently working on"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Guille-ux", email = "guilleleiratemes@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://github.com/Guille-ux/openbattle#readme"
+Issues = "https://github.com/Guille-ux/openbattle/issues"
+Source = "https://github.com/Guille-ux/openbattle"
+
+[tool.hatch.version]
+path = "src/openbattle/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/openbattle tests}"
+
+[tool.coverage.run]
+source_pkgs = ["openbattle", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/openbattle/__about__.py",
+]
+
+[tool.coverage.paths]
+openbattle = ["src/openbattle", "*/openbattle/src/openbattle"]
+tests = ["tests", "*/openbattle/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
