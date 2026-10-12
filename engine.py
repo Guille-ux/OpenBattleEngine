@@ -1,5 +1,3 @@
-
-
 import random
 
 
@@ -34,7 +32,7 @@ class OpenBattleEngine:
             while a.moving_progress >= 1 and len(a.moving_steps) > 0:
                 stop_mov = False
                 for e in state.a_units:
-                    if e.grid_position == a.moving_steps[0]:
+                    if e.grid_position == a.moving_steps[0] and (e.name!=a.name):
                         stop_mov = True
                         break # LO SIENTO, HAY ALGIUEIN EN MEDIO
                 for e in state.e_units:
@@ -70,7 +68,7 @@ class OpenBattleEngine:
             while a.moving_progress >= 1 and len(a.moving_steps) > 0:
                 stop_mov = False
                 for e in state.e_units:
-                    if e.grid_position == a.moving_steps[0]:
+                    if e.grid_position == a.moving_steps[0] and (a.name!=e.name):
                         stop_mov = True
                         break # LO SIENTO, HAY ALGIUEIN EN MEDIO
                 for e in state.a_units:
