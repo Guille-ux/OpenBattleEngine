@@ -1,7 +1,7 @@
 from openbattle.equipment import *
 from openbattle.order import *
 from openbattle.pathfinder import Pathfinder
-from openbattle.math import sqrt
+from math import sqrt
 from openbattle.common import GameData
 
 class UnitData:
